@@ -1,14 +1,9 @@
 import React from "react";
 import Emoji from "./Emoji";
 import emojis from "../data/emojis";
-
-function createEmoji (emoji) {
-    return <Emoji key={emoji.id} emoji={emoji.emoji} name={emoji.name} desc={emoji.meaning}/>
-}
-
 function App () {
     return <div className="flex-container-centered">
-        {emojis.map(createEmoji)}
+        {emojis.map(e => <Emoji key={e.id} emoji={e.emoji} name={e.name} desc={e.meaning}/>)}
     </div>
 }
 
